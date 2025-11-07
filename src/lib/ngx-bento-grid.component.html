@@ -1,0 +1,16 @@
+<div class="om-bento-grid" [ngStyle]="style">
+  @for (item of items; track $index) {
+    <div
+      class="om-bento-item"
+      [style.grid-column]="getColSpan(item, $index)"
+      [style.grid-row]="getRowSpan(item, $index)"
+    >
+      <div class="om-bento-background">
+        <ng-container *ngTemplateOutlet="item.bgTpl"></ng-container>
+      </div>
+      <div class="om-bento-foreground">
+        <ng-container *ngTemplateOutlet="item.fgTpl"></ng-container>
+      </div>
+    </div>
+  }
+</div>

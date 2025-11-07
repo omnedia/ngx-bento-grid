@@ -1,0 +1,25 @@
+{
+  "name": "@omnedia/ngx-bento-grid",
+  "description": "A simple component to create bento grid layouts.",
+  "version": "3.0.0",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "npm",
+    "bento",
+    "grid",
+    "layout",
+    "styling"
+  ],
+  "repository": {
+    "url": "https://github.com/omnedia/ngx-bento-grid"
+  },
+  "author": "Markus Block (markus.block@omnedia.com)",
+  "license": "MIT"
+}

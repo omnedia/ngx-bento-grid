@@ -1,0 +1,63 @@
+.om-bento-grid {
+  --om-bento-columns: 3;
+  --om-bento-gap: 1rem;
+  --om-bento-row-height: 22rem;
+  --om-bento-item-radius: 0.75rem;
+  --om-bento-item-border: 1px solid hsla(0, 0%, 100%, 0.1);
+  --om-bento-item-bg: var(--surface-background);
+  --om-bento-shadow-color: #0000003b;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--om-bento-columns), minmax(0, 1fr));
+  grid-auto-rows: var(--om-bento-row-height);
+  gap: var(--om-bento-gap);
+
+  .om-bento-item {
+    position: relative;
+    background-color: var(--om-bento-item-bg);
+    border: var(--om-bento-item-border);
+    border-radius: var(--om-bento-item-radius);
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 100px -20px var(--om-bento-shadow-color);
+    }
+  }
+
+  .om-bento-background {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .globe {
+      position: absolute;
+      height: fit-content;
+      bottom: -64%;
+      right: -38%;
+      pointer-events: none;
+    }
+  }
+
+  .om-bento-foreground {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+
+    .title {
+      font-weight: bold;
+      font-size: var(--text-small-header);
+    }
+
+    .info {
+      font-size: var(--text-small-subheader);
+      opacity: 0.8;
+    }
+  }
+}
